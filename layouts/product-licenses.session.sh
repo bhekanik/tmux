@@ -1,18 +1,18 @@
 # Set a custom session root path. Default is `$HOME`.
 # Must be called before `initialize_session`.
-session_root "~/code/dealbase-africa"
+session_root "~/code/work/product-licenses"
 
 # Create session with specified name if it does not already exist. If no
 # argument is given, session name will be based on layout file name.
-if initialize_session "dealbase"; then
+if initialize_session "product-licenses"; then
 
   # Create a new window inline within session layout definition.
-  new_window "dealbase"
+  new_window "product-licenses"
   run_cmd "v"
   new_window "terminal"
-  run_cmd "pnpm install"
-  run_cmd "pnpm dev"
-  select_window 0
+  run_cmd "npm install"
+  run_cmd "make init-db"
+  select_window 0 
 
   # Load a defined window layout.
   # load_window "side-term"

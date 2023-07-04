@@ -9,9 +9,10 @@ if initialize_session "packaging"; then
   # Create a new window inline within session layout definition.
   new_window "packaging"
   run_cmd "v"
-  new_window "tmux"
+  new_window "terminal"
   run_cmd "npm install"
   run_cmd "make init-db"
+  select_window 0 
 
   # Load a defined window layout.
   # load_window "side-term"
