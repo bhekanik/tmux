@@ -12,7 +12,6 @@ if initialize_session "dealbase"; then
   new_window "terminal"
   run_cmd "pnpm install"
   run_cmd "pnpm dev"
-  select_window 0
 
   # Load a defined window layout.
   # load_window "side-term"
